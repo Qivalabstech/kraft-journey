@@ -19,6 +19,7 @@
   --line-dark: rgba(26,19,16,0.12);
 
   --serif: "Fraunces", Georgia, serif;
+  --wordmark: "Cinzel", "Fraunces", Georgia, serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 
   --ease: cubic-bezier(.22,.61,.22,1);
@@ -102,8 +103,8 @@ section{ position:relative; }
 .nav.scrolled::before{ opacity:1; }
 .nav-mark{
   display:flex; align-items:center; gap:10px;
-  font-family:var(--serif); font-size:19px; letter-spacing:0.02em; color:var(--cream);
-  font-weight:500;
+  font-family:var(--wordmark); font-size:16px; letter-spacing:0.08em; color:var(--cream);
+  font-weight:600; text-transform:uppercase;
 }
 .nav-mark-img{
   width:34px; height:34px; border-radius:50%; object-fit:cover;
@@ -174,10 +175,11 @@ section{ position:relative; }
   margin-bottom:22px; font-weight:500;
 }
 .hero-title{
-  font-family:var(--serif); font-weight:400;
-  font-size:clamp(3.4rem, 10vw, 8.2rem);
-  letter-spacing:0.01em;
-  line-height:0.95;
+  font-family:var(--wordmark); font-weight:600;
+  font-size:clamp(2.9rem, 8.4vw, 6.8rem);
+  letter-spacing:0.05em;
+  line-height:1.02;
+  text-transform:uppercase;
 }
 .hero-sub{
   margin-top:22px; font-family:var(--serif); font-style:italic; font-weight:400;
@@ -220,10 +222,10 @@ section{ position:relative; }
 .collection{ background:var(--espresso); color:var(--cream); }
 .collection-pin{
   height:100vh; display:flex; flex-direction:column; justify-content:center; overflow:hidden;
-  padding-top:calc(var(--nav-h) + 20px);
+  padding-top:calc(var(--nav-h) + 14px);
 }
 .collection-head{
-  padding:0 clamp(20px,6vw,80px); margin-bottom:clamp(20px,4vh,50px); flex-shrink:0;
+  padding:0 clamp(20px,6vw,80px); margin-bottom:clamp(16px,3vh,36px); flex-shrink:0;
 }
 .collection-head .section-label{ color:var(--tan); }
 .collection-title{
@@ -238,7 +240,7 @@ section{ position:relative; }
 }
 .collection-progress{ display:none; }
 .product-slide{
-  flex:0 0 auto; width:min(78vw,420px);
+  flex:0 0 auto; width:clamp(220px, 30vh, 400px);
   display:flex; flex-direction:column;
 }
 .product-media{
@@ -248,8 +250,15 @@ section{ position:relative; }
   width:100%; height:100%; object-fit:cover;
   transition:transform .7s var(--ease);
 }
+.product-media--plate{
+  background:var(--parchment);
+}
+.product-media--plate img{
+  object-fit:contain; padding:9%; width:100%; height:100%; box-sizing:border-box;
+}
 .product-slide:hover .product-media img{ transform:scale(1.055); }
-.product-info{ padding-top:20px; }
+.product-media--plate:hover img{ transform:scale(1.02); }
+.product-info{ padding-top:16px; }
 .product-tag{
   font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--brass); font-weight:500;
 }
@@ -340,6 +349,7 @@ section{ position:relative; }
 .lifestyle-overlay h2{
   font-family:var(--serif); font-weight:400; color:var(--cream);
   font-size:clamp(2.6rem,7vw,5.6rem); line-height:1.02;
+  text-shadow:0 2px 24px rgba(0,0,0,0.45);
 }
 
 .lifestyle-split{
@@ -382,6 +392,7 @@ section{ position:relative; }
 .final-content h2{
   font-family:var(--serif); font-weight:400; color:var(--cream);
   font-size:clamp(2.8rem,7.5vw,6rem); line-height:0.98;
+  text-shadow:0 2px 24px rgba(0,0,0,0.4);
 }
 
 /* ============ CTA ============ */
@@ -413,7 +424,7 @@ section{ position:relative; }
   flex-wrap:wrap; gap:16px;
   border-top:1px solid rgba(246,241,230,0.08);
 }
-.footer-mark{ display:flex; align-items:center; gap:10px; font-family:var(--serif); font-size:16px; color:var(--cream); }
+.footer-mark{ display:flex; align-items:center; gap:10px; font-family:var(--wordmark); font-size:14px; letter-spacing:0.08em; text-transform:uppercase; font-weight:600; color:var(--cream); }
 .footer-mark img{ width:26px; height:26px; border-radius:50%; object-fit:cover; }
 .footer-links{ display:flex; gap:26px; font-size:13px; letter-spacing:0.04em; }
 .footer-links a{ opacity:0.75; transition:opacity .3s; }
@@ -457,7 +468,7 @@ section{ position:relative; }
   .nav-mark-img{ width:28px; height:28px; }
 
   /* Hero */
-  .hero-title{ font-size:clamp(2.6rem,14vw,3.6rem); }
+  .hero-title{ font-size:clamp(2.4rem,11.5vw,3.4rem); letter-spacing:0.02em; }
   .hero-eyebrow{ font-size:10.5px; letter-spacing:0.14em; padding:0 8px; }
   .hero-sub{ font-size:1rem; margin-top:16px; }
   .hero-content{ padding:0 16px; }
@@ -540,7 +551,7 @@ section{ position:relative; }
 }
 
 @media(max-width:380px){
-  .hero-title{ font-size:2.3rem; }
+  .hero-title{ font-size:2.05rem; letter-spacing:0.01em; }
   .product-slide, .end-card{ width:74vw; }
 }
 
