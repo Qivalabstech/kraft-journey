@@ -26,6 +26,55 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   document.body.style.overflow = '';
 }));
 
+/* ---------------- COLLECTION SCROLL PROGRESS (mobile) ---------------- */
+(function collectionProgress(){
+  const track = document.getElementById('collectionTrack');
+  const fill = document.getElementById('collectionProgressFill');
+  if (!track || !fill) return;
+
+  function update() {
+    const max = track.scrollWidth - track.clientWidth;
+    if (max <= 0) { fill.style.width = '100%'; return; }
+    const pct = (track.scrollLeft / max) * 100;
+    fill.style.width = Math.min(100, Math.max(6, pct)) + '%';
+  }
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
+
+/* ---------------- HERO VIDEO — robust fallback ----------------
+   Video playback over file:// (double-clicked file) is blocked by
+   most browsers. .hero-media already carries the poster image as a
+   CSS background, so if the video can't play we just hide the
+   <video> tag and the cinematic still shows underneath. */
+(function heroVideoFallback(){
+  const heroEl = document.getElementById('hero');
+  const video = document.getElementById('heroVideo');
+  if (!heroEl || !video) return;
+
+  let settled = false;
+  function fallToImage(){
+    if (settled) return;
+    settled = true;
+    heroEl.classList.add('no-video');
+  }
+  function confirmPlaying(){
+    settled = true;
+  }
+  video.addEventListener('error', fallToImage);
+  video.addEventListener('stalled', fallToImage);
+  video.addEventListener('playing', confirmPlaying);
+
+  // If nothing has happened within 2.5s (typical for a blocked
+  // file:// video load), assume it failed and fall back.
+  setTimeout(() => {
+    if (!settled && video.readyState < 2) fallToImage();
+  }, 2500);
+
+  video.play().catch(fallToImage);
+})();
+
 if (!hasGSAP) {
   // Fallback: reveal everything immediately if animation libs failed to load
   document.querySelectorAll('.intro-text, .intro-image, .craft-head, .craft-row, .philosophy-inner, .lifestyle-split-text, .lifestyle-split-img, .final-content, .cta-inner')

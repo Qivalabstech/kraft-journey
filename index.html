@@ -10,6 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+<link rel="preload" as="image" href="images/hero-poster.jpg" imagesrcset="images/mobile/hero-poster-m.jpg 900w, images/hero-poster.jpg 1920w" imagesizes="100vw">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,7 +41,8 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
     <div class="hero-media">
-      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline poster="images/hero-poster.jpg">
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="images/hero-poster.jpg">
+        <source src="video/hero-mobile.mp4" type="video/mp4" media="(max-width: 760px)">
         <source src="video/hero.mp4" type="video/mp4">
       </video>
       <div class="hero-scrim"></div>
@@ -68,7 +71,7 @@
         </p>
       </div>
       <div class="intro-image">
-        <img src="images/craft-saddle-editorial.jpg" alt="Rider in the field, Kraft Journey" loading="lazy">
+        <img src="images/craft-saddle-editorial.jpg" srcset="images/mobile/craft-saddle-editorial-m.jpg 900w, images/craft-saddle-editorial.jpg 1600w" sizes="(max-width:900px) 92vw, 45vw" alt="Rider in the field, Kraft Journey" loading="lazy">
       </div>
     </div>
   </section>
@@ -79,6 +82,7 @@
       <div class="collection-head">
         <p class="section-label">Discover</p>
         <h2 class="collection-title">The Collection</h2>
+        <p class="collection-hint">Swipe to explore</p>
       </div>
       <div class="collection-track" id="collectionTrack">
 
@@ -193,6 +197,9 @@
         </article>
 
       </div>
+      <div class="collection-progress" aria-hidden="true">
+        <div class="collection-progress-fill" id="collectionProgressFill"></div>
+      </div>
     </div>
   </section>
 
@@ -259,7 +266,7 @@
   <!-- ============ LIFESTYLE ============ -->
   <section class="lifestyle" id="lifestyle">
     <div class="lifestyle-media">
-      <img src="images/lifestyle-jockey-action-2.jpg" alt="Rider in Kraft Journey colours, in motion" loading="lazy">
+      <img src="images/lifestyle-jockey-action-2.jpg" srcset="images/mobile/lifestyle-jockey-action-2-m.jpg 900w, images/lifestyle-jockey-action-2.jpg 1536w" sizes="100vw" alt="Rider in Kraft Journey colours, in motion" loading="lazy">
     </div>
     <div class="lifestyle-overlay">
       <h2>More than<br>the ride.</h2>
@@ -268,7 +275,7 @@
 
   <section class="lifestyle-split">
     <div class="lifestyle-split-img">
-      <img src="images/lifestyle-rodeo-action.jpg" alt="Rider and horse in open ground" loading="lazy">
+      <img src="images/lifestyle-rodeo-action.jpg" srcset="images/mobile/lifestyle-rodeo-action-m.jpg 900w, images/lifestyle-rodeo-action.jpg 1600w" sizes="(max-width:900px) 100vw, 50vw" alt="Rider and horse in open ground" loading="lazy">
     </div>
     <div class="lifestyle-split-text">
       <p class="section-label">The journey</p>
@@ -295,7 +302,7 @@
   <!-- ============ FINAL STATEMENT ============ -->
   <section class="final" id="final">
     <div class="final-media">
-      <img src="images/hero-poster.jpg" alt="Rider on horseback in open countryside" loading="lazy">
+      <img src="images/hero-poster.jpg" srcset="images/mobile/hero-poster-m.jpg 900w, images/hero-poster.jpg 1920w" sizes="100vw" alt="Rider on horseback in open countryside" loading="lazy">
       <div class="final-scrim"></div>
     </div>
     <div class="final-content">
