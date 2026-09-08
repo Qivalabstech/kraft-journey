@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Kraft Journey — Accessories Crafted for the Journey</title>
+<meta name="description" content="Kraft Journey. Horse-riding accessories and equestrian lifestyle, crafted for the journey.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain-overlay"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-mark">
+    <img src="images/logo-emblem-black.jpg" alt="Kraft Journey" class="nav-mark-img">
+    <span>Kraft Journey</span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="#collection" data-nav>Collection</a>
+    <a href="#craft" data-nav>Craft</a>
+    <a href="#lifestyle" data-nav>Journey</a>
+    <a href="#contact" data-nav class="nav-cta">Contact</a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline poster="images/hero-poster.jpg">
+        <source src="video/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-scrim"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Horse-riding accessories &amp; equestrian lifestyle</p>
+      <h1 class="hero-title">Kraft&nbsp;Journey</h1>
+      <p class="hero-sub">Crafted for the journey</p>
+    </div>
+    <div class="hero-scroll-cue">
+      <span class="scroll-line"></span>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ============ BRAND INTRO ============ -->
+  <section class="intro" id="intro">
+    <div class="intro-grid">
+      <div class="intro-text">
+        <p class="section-label">The house</p>
+        <h2 class="intro-statement">Crafted for<br>the journey.</h2>
+        <p class="intro-copy">
+          Kraft Journey makes the equipment that carries a rider from the stable yard to open country —
+          saddles, tack, boots and the small leather goods that get handled every single day.
+          Every piece is built first to be used, and its character is earned through wear rather than added for show.
+        </p>
+      </div>
+      <div class="intro-image">
+        <img src="images/craft-saddle-editorial.jpg" alt="Rider in the field, Kraft Journey" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COLLECTION (horizontal scroll) ============ -->
+  <section class="collection" id="collection">
+    <div class="collection-pin">
+      <div class="collection-head">
+        <p class="section-label">Discover</p>
+        <h2 class="collection-title">The Collection</h2>
+      </div>
+      <div class="collection-track" id="collectionTrack">
+
+        <article class="product-slide">
+          <div class="product-media">
+            <img src="images/product-saddle-english-black-1.jpg" alt="English saddle, black leather" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Saddlery</span>
+            <h3>English Saddle</h3>
+            <p>Close-contact leather, built for balance and quiet communication with the horse.</p>
+          </div>
+        </article>
+
+        <article class="product-slide">
+          <div class="product-media">
+            <img src="images/product-saddle-western-tan-1.jpg" alt="Tooled western saddle" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Saddlery</span>
+            <h3>Western Saddle</h3>
+            <p>Hand-tooled tan leather, shaped for long hours in open country.</p>
+          </div>
+        </article>
+
+        <article class="product-slide">
+          <div class="product-media">
+            <img src="images/product-boots-tan-tall-1.jpg" alt="Tan tall riding boots" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Footwear</span>
+            <h3>Tall Riding Boots</h3>
+            <p>Full-grain leather boots, built to move with the leg through every stride.</p>
+          </div>
+        </article>
+
+        <article class="product-slide">
+          <div class="product-media">
+            <img src="images/product-boots-black-chelsea-1.jpg" alt="Black leather jodhpur boots" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Footwear</span>
+            <h3>Jodhpur Boots</h3>
+            <p>A low, close-fitting boot for the yard and everything after it.</p>
+          </div>
+        </article>
+
+        <article class="product-slide">
+          <div class="product-media">
+            <img src="images/craft-weave-belts-1.jpg" alt="Woven leather belts, detail" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Leather Goods</span>
+            <h3>Woven Belts</h3>
+            <p>Hand-woven patterned belts, finished in full-grain leather.</p>
+          </div>
+        </article>
+
+        <article class="product-slide">
+          <div class="product-media">
+            <img src="images/product-halter-brown-brick.jpg" alt="Leather halter, brown and tan" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Tack</span>
+            <h3>Leather Halter</h3>
+            <p>Stitched leather with brass fittings, sized for everyday handling.</p>
+          </div>
+        </article>
+
+        <article class="product-slide">
+          <div class="product-media">
+            <img src="images/product-girth-sheepskin-1.jpg" alt="Sheepskin-lined girth" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Tack</span>
+            <h3>Sheepskin Girth</h3>
+            <p>A soft, breathable lining against the leather for a comfortable fit.</p>
+          </div>
+        </article>
+
+        <article class="product-slide">
+          <div class="product-media">
+            <img src="images/product-breeches-olive.jpg" alt="Riding breeches, olive" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Apparel</span>
+            <h3>Riding Breeches</h3>
+            <p>Quilted knee panels and a fitted cut, made to move with the saddle.</p>
+          </div>
+        </article>
+
+        <article class="product-slide">
+          <div class="product-media">
+            <img src="images/product-grooming-kit.jpg" alt="Grooming kit" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Care</span>
+            <h3>Grooming Set</h3>
+            <p>The everyday tools for keeping a coat and tack in working order.</p>
+          </div>
+        </article>
+
+        <article class="product-slide product-slide--end">
+          <div class="end-card">
+            <p class="section-label">Full range</p>
+            <h3>The complete collection lives on Instagram</h3>
+            <a href="https://www.instagram.com/kraft.journey/" target="_blank" rel="noopener" class="btn btn-line">
+              <span>DM Now to Know More</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CRAFT / DETAIL ============ -->
+  <section class="craft" id="craft">
+    <div class="craft-head">
+      <p class="section-label">Close up</p>
+      <h2>What holds it together</h2>
+    </div>
+
+    <div class="craft-row">
+      <div class="craft-image craft-image--large">
+        <img src="images/craft-weave-belts-2.jpg" alt="Hand-woven belt pattern, close detail" loading="lazy">
+        <span class="craft-mark">Material</span>
+      </div>
+      <div class="craft-copy">
+        <p>
+          Patterns are woven by hand before the leather backing is set, so no two lengths sit
+          quite the same way. It's the kind of detail you notice with your thumb before you notice it with your eye.
+        </p>
+      </div>
+    </div>
+
+    <div class="craft-row craft-row--reverse">
+      <div class="craft-image">
+        <img src="images/product-saddle-english-tan.jpg" alt="Saddle stitching detail" loading="lazy">
+        <span class="craft-mark">Form</span>
+      </div>
+      <div class="craft-copy">
+        <p>
+          A saddle is shaped around movement, not the other way around. Seams sit where the
+          body flexes, and the leather is left to soften into its own shape over time.
+        </p>
+      </div>
+    </div>
+
+    <div class="craft-row">
+      <div class="craft-image">
+        <img src="images/craft-model-holding-saddle.jpg" alt="Rider carrying a saddle" loading="lazy">
+        <span class="craft-mark">Craft</span>
+      </div>
+      <div class="craft-copy">
+        <p>
+          Every strap, buckle and stitch line is there to do a job first. If it looks
+          considered, it's because it had to hold — under weight, in weather, every day.
+        </p>
+      </div>
+    </div>
+
+    <div class="craft-row craft-row--reverse">
+      <div class="craft-image">
+        <img src="images/product-halter-blue-brick.jpg" alt="Leather halter detail" loading="lazy">
+        <span class="craft-mark">Detail</span>
+      </div>
+      <div class="craft-copy">
+        <p>
+          Fittings are set flush and edges are finished by hand, so nothing catches —
+          not on your fingers, and not on the horse.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIFESTYLE ============ -->
+  <section class="lifestyle" id="lifestyle">
+    <div class="lifestyle-media">
+      <img src="images/lifestyle-jockey-action-2.jpg" alt="Rider in Kraft Journey colours, in motion" loading="lazy">
+    </div>
+    <div class="lifestyle-overlay">
+      <h2>More than<br>the ride.</h2>
+    </div>
+  </section>
+
+  <section class="lifestyle-split">
+    <div class="lifestyle-split-img">
+      <img src="images/lifestyle-rodeo-action.jpg" alt="Rider and horse in open ground" loading="lazy">
+    </div>
+    <div class="lifestyle-split-text">
+      <p class="section-label">The journey</p>
+      <p class="lifestyle-copy">
+        Whatever the discipline — arena, trail or open field — the gear should disappear into
+        the moment. Kraft Journey is built for the ride first, and everything else follows from that.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ PHILOSOPHY ============ -->
+  <section class="philosophy" id="philosophy">
+    <div class="philosophy-inner">
+      <p class="section-label">Philosophy</p>
+      <h2>Made to be used, not just owned.</h2>
+      <p class="philosophy-copy">
+        We think about equipment the way a rider does: by how it holds up, not how it photographs.
+        Leather is chosen for how it wears in. Stitching is placed where it will be tested.
+        Nothing is added that doesn't earn its place on the tack room wall.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ FINAL STATEMENT ============ -->
+  <section class="final" id="final">
+    <div class="final-media">
+      <img src="images/hero-poster.jpg" alt="Rider on horseback in open countryside" loading="lazy">
+      <div class="final-scrim"></div>
+    </div>
+    <div class="final-content">
+      <h2>Built for<br>the journey.</h2>
+    </div>
+  </section>
+
+  <!-- ============ INSTAGRAM CTA ============ -->
+  <section class="cta" id="contact">
+    <div class="cta-inner">
+      <p class="section-label">Get in touch</p>
+      <h2>Come see the full collection.</h2>
+      <p class="cta-copy">We reply personally to every message — colours, sizing, availability, all of it.</p>
+      <a href="https://www.instagram.com/kraft.journey/" target="_blank" rel="noopener" class="btn btn-solid magnetic">
+        <span>DM Now to Know More</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="https://www.instagram.com/kraft.journey/" target="_blank" rel="noopener" class="cta-handle">@kraft.journey</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-mark">
+    <img src="images/logo-emblem-black.jpg" alt="Kraft Journey">
+    <span>Kraft Journey</span>
+  </div>
+  <div class="footer-links">
+    <a href="https://www.instagram.com/kraft.journey/" target="_blank" rel="noopener">Instagram</a>
+    <a href="#top">Back to top</a>
+  </div>
+  <p class="footer-note">Accessories crafted for the journey.</p>
+</footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
